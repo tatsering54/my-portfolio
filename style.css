@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    background-color: #000;
+    color: #00ff00;
+    padding: 20px;
+    line-height: 1.4;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.prompt {
+    color: #00ff00;
+}
+
+.command {
+    color: #ffffff;
+}
+
+.separator {
+    color: #888;
+    margin: 10px 0;
+}
+
+.section-title {
+    color: #ffff00;
+    font-weight: bold;
+}
+
+.bullet {
+    color: #00ff00;
+}
+
+.description {
+    color: #ccc;
+}
+
+.link {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.highlight {
+    color: #00ffaa;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.warning {
+    color: #ffaa00;
+}
+
+.input-line {
+    margin: 5px 0;
+}
+
+.help-section {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.command-list {
+    margin-left: 20px;
+}
+
+pre {
+    font-family: inherit;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { 
+        opacity: 1; 
+    }
+    51%, 100% { 
+        opacity: 0; 
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    pre {
+        font-size: 10px;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 11px;
+        padding: 5px;
+    }
+    
+    .help-section {
+        font-size: 10px;
+    }
+}
