@@ -37,6 +37,8 @@ body {
 .separator {
     color: #888;
     margin: 10px 0;
+    white-space: pre;  /* THIS IS THE KEY FIX - preserves spaces and line breaks */
+    overflow-x: auto;
 }
 
 .section-title {
@@ -50,6 +52,7 @@ body {
 
 .description {
     color: #ccc;
+    white-space: pre-wrap;  /* Preserves formatting in descriptions too */
 }
 
 .link {
@@ -91,8 +94,8 @@ body {
 pre {
     font-family: inherit;
     margin: 0;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    white-space: pre;  /* Changed from pre-wrap to preserve exact formatting */
+    overflow-x: auto;
 }
 
 .cursor {
@@ -123,6 +126,11 @@ pre {
         font-size: 10px;
         overflow-x: auto;
     }
+    
+    .separator {
+        font-size: 12px;
+        overflow-x: scroll;
+    }
 }
 
 @media (max-width: 480px) {
@@ -133,5 +141,9 @@ pre {
     
     .help-section {
         font-size: 10px;
+    }
+    
+    .separator {
+        font-size: 11px;
     }
 }
